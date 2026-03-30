@@ -3,6 +3,13 @@ import { Header } from "../Components/Header";
 import { products } from "../data/products.js";
 
 export function HomePage() {
+  fetch("http://localhost:3000/api/products")
+    .then((response) => {
+      response.json();
+    })
+    .then((data) => {
+      console.log(data);
+    });
   return (
     <>
       <title>Home</title>
