@@ -1,6 +1,3 @@
-export const formatMoney = (amount) => {
-  return new Intl.NumberFormat("en-US", {
-    style: "currency",
-    currency: "USD",
-  }).format(amount);
-};
+export function formatMoney(amountCents) {
+  return `$${(amountCents / 100).toFixed(2)}`;
+}
